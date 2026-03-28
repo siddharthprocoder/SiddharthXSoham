@@ -2,33 +2,49 @@ body {
     min-height: 100vh;
     margin: 0;
     display: grid;
-    place-items: center;
+    place-items: start center;
+    padding-top: 40px;
     background: linear-gradient(180deg, #eef8f4 0%, #d7efe2 100%);
     font-family: Arial, sans-serif;
 }
 
 .page {
-    width: min(90%, 900px);
-    padding: 30px 25px;
-    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 30px;
+    text-align: left;
+    box-sizing: border-box;
 }
 
 .first {
     color: blue;
     background-color: cadetblue;
-    display: inline-block;
-    padding: 0.6rem 1rem;
+    display: block;
+    width: fit-content;
+    margin: 0 auto 20px;
+    text-align: center;
+    font-size: 2.4rem;
+    padding: 0.8rem 1.2rem;
     border-radius: 14px;
 }
 
+.page p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    width: 100%;
+    margin: 16px 0 0;
+    text-align: left;
+}
+
 .link-card {
-    display: inline-block;
+    display: block;
     margin: 35px auto 0;
     padding: 24px 32px;
     background: #ffffff;
     border: 2px solid #2f8f5e;
     border-radius: 22px;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+    text-align: center;
 }
 
 a {
