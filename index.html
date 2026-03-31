@@ -7,11 +7,10 @@
 </head>
 <body>
 
-<!-- Navbar -->
 <header>
     <nav class="navbar">
         <div class="logo">☰</div>
-        <ul>
+        <ul class="menu">
             <li>Developer Notes</li>
             <li>Community</li>
             <li>Versions</li>
@@ -25,76 +24,111 @@
     </nav>
 </header>
 
-<!-- Hero Section -->
 <section class="hero">
-    <h1>MINECRAFT 2</h1>
-    <p>-Made with by 2 noobs who refused to touch JavaScript</p>
-    <div class="hero-buttons">
-        <button class="btn light">Versions</button>
-        <button class="btn dark">Download</button>
+    <div class="hero-inner">
+        <h1>MINECRAFT 2</h1>
+        <p>-Made with by 2 noobs who refused to touch JavaScript</p>
+        <div class="hero-buttons">
+            <button class="btn ghost">Versions</button>
+            <button class="btn solid">Download</button>
+        </div>
     </div>
 </section>
 
-<!-- Characters -->
 <section class="characters">
-    <img src="https://upload.wikimedia.org/wikipedia/en/3/3e/Alex_Minecraft.png" alt="Alex">
-    <img src="https://upload.wikimedia.org/wikipedia/en/5/51/Steve_%28Minecraft%29.png" alt="Steve">
+    <div class="character-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/3e/Alex_Minecraft.png" alt="Alex">
+    </div>
+    <div class="character-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/51/Steve_%28Minecraft%29.png" alt="Steve">
+    </div>
 </section>
 
-<!-- Features -->
 <section class="features">
-    <h2>How to play</h2>
-    <p>Enjoy your creative</p>
+    <div class="section-header">
+        <h2>How to play</h2>
+        <p>Enjoy your creative</p>
+    </div>
 
     <div class="grid">
         <div class="card">
-            <h3>Explore</h3>
-            <p>Explore the whole world with nothing but a sword.</p>
+            <span class="icon">🧭</span>
+            <div>
+                <h3>Explore</h3>
+                <p>Explore the whole world with nothing but a sword as you travel beyond horizons.</p>
+            </div>
         </div>
         <div class="card">
-            <h3>Mine</h3>
-            <p>Mine caves and gather resources.</p>
+            <span class="icon">⛏️</span>
+            <div>
+                <h3>Mine</h3>
+                <p>Mine the caves and gather the resources to get stronger and build better gear.</p>
+            </div>
         </div>
         <div class="card">
-            <h3>Craft</h3>
-            <p>Craft useful items and survive.</p>
+            <span class="icon">⚒️</span>
+            <div>
+                <h3>Craft</h3>
+                <p>Craft using the materials you mined and craft better gear by choice.</p>
+            </div>
         </div>
         <div class="card">
-            <h3>Survive</h3>
-            <p>Stay alive using your skills.</p>
+            <span class="icon">🛡️</span>
+            <div>
+                <h3>Survive</h3>
+                <p>Survive because you only have 1 life and losing it can end your adventure.</p>
+            </div>
         </div>
         <div class="card">
-            <h3>Hunt</h3>
-            <p>Find animals and food.</p>
+            <span class="icon">🐾</span>
+            <div>
+                <h3>Hunt</h3>
+                <p>Hunt animals to get food and stay alive or die by your own choice.</p>
+            </div>
         </div>
         <div class="card">
-            <h3>Build</h3>
-            <p>Create structures and bases.</p>
+            <span class="icon">🏗️</span>
+            <div>
+                <h3>Build</h3>
+                <p>Build houses and many more things to protect from danger and survive.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Footer -->
 <footer>
+    <div class="footer-top">
+        <div class="footer-brand">
+            <span class="footer-logo">✦</span>
+            <p>Made with joy by two noobs who love pixelated adventures.</p>
+        </div>
+        <div class="footer-social">
+            <span>✕</span>
+            <span>◎</span>
+            <span>☰</span>
+            <span>🔗</span>
+        </div>
+    </div>
     <div class="footer-container">
         <div>
             <h4>Credits</h4>
-            <p>Sohan - Design</p>
-            <p>Siddharth - Design</p>
+            <p>Sohan - Design, Head</p>
+            <p>Siddharth - Design, Head</p>
         </div>
-
         <div>
             <h4>Version</h4>
             <p>1.0</p>
             <p>1.4</p>
             <p>2.0</p>
+            <p>2.6</p>
+            <p>3.1</p>
         </div>
-
         <div>
             <h4>Quick Links</h4>
             <p>Home</p>
             <p>About</p>
-            <p>Download</p>
+            <p>Features</p>
+            <p>Downloads</p>
         </div>
     </div>
 </footer>
