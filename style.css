@@ -25,14 +25,15 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
-    background: rgba(16, 38, 18, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(10, 30, 14, 0.72);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
 }
 
 .navbar {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 18px 24px;
+    padding: 20px 28px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,25 +41,65 @@ header {
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.06));
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
     cursor: pointer;
+    transition: background 0.25s ease, transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.logo:hover {
+    background: linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0.10));
+    border-color: rgba(255, 255, 255, 0.28);
+    transform: translateY(-2px);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.22), inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.logo-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.logo-text {
+    font-size: 0.95rem;
+    color: #f2f7f0;
+    font-weight: 600;
 }
 
 .menu {
     display: flex;
     list-style: none;
-    gap: 26px;
+    gap: 16px;
     font-size: 0.95rem;
 }
 
 .menu li {
     cursor: pointer;
-    transition: color 0.2s ease;
+    transition: background 0.25s ease, transform 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.07));
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #eff7ea;
+    backdrop-filter: blur(18px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.18), 0 10px 25px rgba(0,0,0,0.08);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.15);
 }
 
 .menu li:hover {
-    color: #a9d18e;
+    background: rgba(76, 132, 82, 0.24);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.22), 0 16px 32px rgba(0,0,0,0.18);
 }
 
 .auth {
@@ -69,21 +110,26 @@ header {
 
 .btn {
     padding: 10px 18px;
-    border: 1px solid transparent;
     border-radius: 999px;
-    background: transparent;
+    background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.08));
+    border: 1px solid rgba(255,255,255,0.22);
     color: inherit;
     cursor: pointer;
-    transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    backdrop-filter: blur(14px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.16), 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .btn:hover {
     transform: translateY(-1px);
+    background: rgba(255,255,255,0.28);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.24), 0 14px 34px rgba(0,0,0,0.12);
 }
 
 .btn.primary {
-    background: #f6f6f6;
+    background: rgba(255,255,255,0.22);
     color: #161d16;
+    border-color: rgba(255,255,255,0.26);
 }
 
 .btn.ghost {
@@ -93,8 +139,10 @@ header {
 }
 
 .btn.solid {
-    background: #1e3e1f;
+    background: linear-gradient(160deg, rgba(27, 55, 26, 0.95), rgba(35, 77, 37, 0.96));
     color: #f7f7f7;
+    border-color: rgba(255,255,255,0.18);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 12px 30px rgba(16, 40, 18, 0.25);
 }
 
 .hero {
@@ -123,10 +171,50 @@ header {
 }
 
 .hero-buttons {
-    display: inline-flex;
+    display: flex;
     gap: 14px;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.hero-email {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero-email .email-input {
+    flex: 1 1 320px;
+    min-width: 280px;
+    max-width: 420px;
+}
+
+.hero-email .btn.primary {
+    flex: 0 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.email-input {
+    padding: 14px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.24);
+    color: #183218;
+    outline: none;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.16);
+    font-size: 1rem;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.email-input:focus {
+    background: rgba(255,255,255,0.35);
+    border-color: rgba(255,255,255,0.55);
+    transform: translateY(-1px);
 }
 
 .characters {
@@ -139,21 +227,30 @@ header {
 }
 
 .character-card {
-    background: #37493a;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(16px);
     border-radius: 22px;
     padding: 24px;
     box-shadow: 0 24px 60px rgba(20, 33, 20, 0.16);
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.character-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 34px 80px rgba(20, 33, 20, 0.24);
+    border-color: rgba(255, 255, 255, 0.24);
 }
 
 .character-card img {
     width: 100%;
     max-width: 380px;
     border-radius: 16px;
-    border: 5px solid rgba(255,255,255,0.15);
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+    border: 4px solid rgba(255,255,255,0.22);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
 }
 
 .features {
@@ -163,9 +260,9 @@ header {
 }
 
 .section-header {
-    text-align: left;
+    text-align: center;
     max-width: 560px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
 }
 
 .section-header h2 {
@@ -185,26 +282,39 @@ header {
 }
 
 .card {
-    background: #ffffff;
-    border-radius: 18px;
-    padding: 26px;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(28px);
+    border-radius: 28px;
+    padding: 28px;
     display: flex;
-    gap: 16px;
+    gap: 18px;
     align-items: flex-start;
     min-height: 160px;
-    box-shadow: 0 16px 40px rgba(23, 36, 24, 0.08);
+    box-shadow: 0 28px 60px rgba(18, 35, 20, 0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    background-clip: border-box;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 38px 82px rgba(18, 35, 20, 0.18);
+    background: rgba(255, 255, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.36);
 }
 
 .card .icon {
     font-size: 1.7rem;
-    width: 46px;
-    height: 46px;
+    width: 52px;
+    height: 52px;
     display: grid;
     place-items: center;
-    border-radius: 14px;
-    background: #eff8ea;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.92);
     color: #2f572f;
     flex-shrink: 0;
+    box-shadow: inset 0 1px 2px rgba(255,255,255,0.8), 0 6px 18px rgba(0,0,0,0.08);
+    border: 1px solid rgba(255,255,255,0.45);
 }
 
 .card h3 {
